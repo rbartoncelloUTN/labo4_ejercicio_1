@@ -1,0 +1,30 @@
+<div class="body">
+  <div class="form-container">
+    <div class="inputs-container">
+      <input
+        placeholder="Ingrese la edad"
+        class="input"
+        type="number"
+        [(ngModel)]="numberOne"
+      />
+      <input
+        placeholder="Ingrese la edad"
+        class="input"
+        type="number"
+        [(ngModel)]="numberTwo"
+      />
+    </div>
+    <button [disabled]="!numberOne || !numberTwo" (click)="add()">
+      Calcular
+    </button>
+    @if (addResult !== 0) {
+    <div class="result-container">
+      <p class="result-text">El resultado es {{ addResult }}</p>
+    </div>
+    } @if (addResult !== 0) {
+    <button (click)="clear()">Limpiar cuadros de textos</button>
+
+    }
+    <p class="global-title">{{ nombre }}</p>
+  </div>
+</div>
